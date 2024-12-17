@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Sample</h1>
+
+<p/>
+<table border="1" width="100%">
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Address</th>
+		<th>Date</th>
+	</tr>
+	<tr th:each="samp : ${sample}">
+		<td th:text="${samp.id}"></td>
+		<td th:text="${samp.name}"></td>
+		<td th:text="${samp.address}"></td>
+		<td th:text="${samp.date}"></td>
+		</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<title>Insert title here</title>
+
+<link th:href="@{/css/navbar.css}" rel="stylesheet" />
+<link th:href="@{/css/image.css}" rel="stylesheet" />
+</head>
+<body>
+
+	<h1  class="back">STUDENT MANAGEMENT SYSTEM</h1>
+	<div class="navbar">
+		<a th:href="@{/smsHome}">HOME</a> <a th:href="@{/aboutus}">ABOUT</a>
+		<div class="dropdown">
+					<button class="dropbtn">
+						ADMIN <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+						<a th:href="@{/login}">Login</a> <a th:href="@{/registration}">Register</a>
+					</div>
+				</div>
+		<div class="dropdown">
+			<button class="dropbtn">
+				STUDENT <i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a th:href="@{/login}">Login</a> <a th:href="@{/registration}">Register</a>
+			</div>
+		</div>
+	</div>
+	<div class="about">
+		<h2>ABOUT US</h2>
+	<h2>Education is changing courses, and we are taking the Lead</h2>
+	We are committed to bringing innovation at the core of the education system – the schools.
+	<ul>
+	<li>
+	Driving excellent learning outcomes for every child</li>
+	<li>
+	Equipping every school to deliver international standard education
+	</li>
+	<li>
+	Enabling unmatched exposure opportunities via exclusive platforms
+	</li>
+	</ul>
+	</div>
+	</div>
+	<footer>Footer Section</footer>
+</body>
+</html>

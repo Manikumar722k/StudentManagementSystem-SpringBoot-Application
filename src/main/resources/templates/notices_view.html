@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color:#D3D3D3 ;
+}
+footer {
+            width: 100%;
+            bottom: 0px;
+            background-color: #000;
+            color: #fff;
+            position: absolute;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 0px;
+  height: 100px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+h5
+{
+background-color: blue;
+color: white;
+}
+h1
+{
+background-color: blue;
+color: white;
+}
+.dropbtn {
+  background-color: #f1f1f1;
+  color: b;
+  padding: 12px 16px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #555;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+  
+}
+</style>
+</head>
+<body>
+	<h1 align="center">STUDENT MANAGEMENT SYSTEM</h1>
+	<nav>
+	<section>
+	<div class="sidebar">
+	<h5 align="center">DASHBOARD</h5>
+	  <a  href="dashBoard">DASHBOARD</a>
+	  
+	  <div class="dropdown">
+	  <button class="dropbtn">STUDENTS</button>
+	  <div class="dropdown-content">
+		<a href="addStudent">ADD STUDENTS</a>
+					  <a href="stuHome">VIEW STUDENTS</a> 
+	  <a href="#">Link 3</a>
+	  </div>
+	</div>
+	  <div class="dropdown">
+	  <button class="dropbtn">CLASSES</button>
+	  <div class="dropdown-content">
+		<a href="addClasses">ADD CLASSES</a>
+			  <a href="getAllClasses">VIEW CLASSES</a>
+	  <a href="#">Link 3</a>
+	  </div>
+	</div>
+	<div class="dropdown">
+	  <button class="dropbtn">NOTICES</button>
+	  <div class="dropdown-content">
+	  <a href="addNotice">ADD NOTICES</a>
+	  <a href="getAllNotices">VIEW NOTICES</a>
+	  <a href="#">Link 3</a>
+	  </div>
+	</div>
+	<a href="news">News</a>
+	  <a href="contactUs">Contact</a>
+	  <a href="aboutUs">About</a>
+	</div>
+	</section>
+	</nav>
+	<main>
+	<div class="content">
+	<h2 align="center">Notices View</h2>
+	<table border="1" width="100%" class="table table-success table-striped">
+		<tr>
+			<th>Id</th>
+			<th>Notice Name</th>
+			<th>Message</th>
+			<th>Date</th>
+			<th>Edit Action</th>
+			<th>Delete Action</th>
+		</tr>
+		<tr th:each="notice : ${notices}">
+			<td th:text="${notice.id}"></td>
+			<td th:text="${notice.noticeName}"></td>
+			<td th:text="${notice.message}"></td>
+			<td th:text="${notice.date}"></td>
+			<td><a th:href="@{/editNotice/{id}(id=${notice.id})}"><button>Edit</button></a></td>
+			<td><a th:href="@{/deleteNotice/{id}(id=${notice.id})}"><button>Delete</button></a></td>
+			</tr>
+	</table>
+	</div>
+	</main>
+	<footer>Footer</footer>
+</body>
+</html>

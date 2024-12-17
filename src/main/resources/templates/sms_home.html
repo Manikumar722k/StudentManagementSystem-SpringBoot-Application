@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link th:href="@{/css/navbar.css}" rel="stylesheet" />
+<link th:href="@{/css/image.css}" rel="stylesheet" />
+<link th:href="@{/css/footer.css}" rel="stylesheet" />
+</head>
+<body>
+
+	<h1  class="back">STUDENT MANAGEMENT SYSTEM</h1>
+	<div class="navbar">
+		<a th:href="@{/smsHome}">HOME</a> <a th:href="@{/aboutus}">ABOUT</a>
+		<div class="dropdown">
+					<button class="dropbtn">
+						ADMIN <i class="fa fa-caret-down"></i>
+					</button>
+					<div class="dropdown-content">
+						<a th:href="@{/login}">Login</a> <a th:href="@{/registration}">Register</a>
+					</div>
+				</div>
+		<div class="dropdown">
+			<button class="dropbtn">
+				STUDENT <i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a th:href="@{/login}">Login</a> <a th:href="@{/registration}">Register</a>
+			</div>
+		</div>
+	</div>
+	<div class="container" >
+		<img class="image" alt="" th:src="@{../static/images/exploring-world.jpg}" align="center" width="1333" height="550">
+		
+		<div class="text-block">
+			Registered Students Can Login Here<br> <a th:href="@{/login}"><button>Login</button></a>
+		
+		</div>
+		
+	</div>
+	<section class="footer">
+		      <div class="footer-row">
+		        <div class="footer-col">
+		          <h4>Contact Us</h4>
+		          <ul class="links">
+		            <li>Call Us: <a href="#">(+91) 9533824416 </a></li>
+		            <li>Mail Us: <a href="#">pmanikumar722k@gmail.com</a></li>
+		            
+		          </ul>
+		        </div>
+		        <div class="footer-col">
+		          <h4>Quick Links</h4>
+		          <ul class="links">
+		            <li><a href="#">Why VSM College?</a></li>
+		            <li><a href="#">Teaching Staff</a></li>
+		            <li><a href="#">Infrastructure</a></li>
+		            <li><a href="#">Photo Gallery</a></li>
+		            <li><a href="#">Video Gallery</a></li>
+		           
+		          </ul>
+		        </div>
+		        <div class="footer-col">
+		          <h4>Useful Links</h4>
+		          <ul class="links">
+		            <li><a href="#">Subject Combinations</a></li>
+		            <li><a href="#">Sports Facilites</a></li>
+		            <li><a href="#">Commities</a></li>
+		            <li><a href="#">Teaching Staff</a></li>
+		            <li><a href="#">Contact Us</a></li>
+		            
+		          </ul>
+		        </div>
+		        <div class="footer-col">
+		          <h4>How To Reach Us </h4>
+		          <p>
+		            <h4>SMS College</h4>
+		            <h6>Ravulapalem,</h6>
+		            <h6>East Godavari District,A.P,India.</h6>
+		            <h6>Pin Code:533236</h6>
+		            <h6>E-mail: pmanikumar722k@gmail.com</h6>
+		          </p>
+		          <form action="#">
+		            <input type="text" placeholder="Your email" required>
+		            <button type="submit">SUBSCRIBE</button>
+		          </form>
+		          <div class="icons">
+		            <i class="fa-brands fa-facebook-f"></i>
+		            <i class="fa-brands fa-twitter"></i>
+		            <i class="fa-brands fa-linkedin"></i>
+		            <i class="fa-brands fa-github"></i>
+		          </div>
+		        </div>
+		      </div>
+		    </section>
+
+</body>
+</html>

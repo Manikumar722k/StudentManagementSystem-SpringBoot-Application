@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";
+.container {
+  position: relative;
+  display:inline-flex;
+  
+  
+ 
+ 
+  background-color: lightblue;
+}
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color:transparent; ;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+}
+.image
+{
+	
+}
+footer {
+            width: 100%;
+            bottom: 0px;
+            height:10px;
+            background-color: #000;
+            color: #fff;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 50px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            
+        }
+        
+ .about{
+	height:1000px;
+	background-color: ;
+ }
