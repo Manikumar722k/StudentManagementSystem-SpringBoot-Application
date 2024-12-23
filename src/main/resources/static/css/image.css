@@ -20,7 +20,10 @@
 }
 .image
 {
-	
+	width:1350px;
+    height:550px;
+   position: relative;
+   
 }
 footer {
             width: 100%;

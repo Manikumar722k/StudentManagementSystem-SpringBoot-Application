@@ -6,15 +6,15 @@
   font-family: 'Open Sans', sans-serif;
 }
 .footer {
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
   
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -0%);
   max-width: 1400px;
   width: 100%;
   background: #10182F;
-  border-radius: 6px;
+  border-radius: 0px;
 }
 .footer .footer-row {
   display: flex;
