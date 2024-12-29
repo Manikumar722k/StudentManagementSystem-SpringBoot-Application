@@ -12,7 +12,7 @@
 	<groupId>com.sms</groupId>
 	<artifactId>studentManagementSystem</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	
+	<packaging>war</packaging>
 	<name>studentManagementSystem</name>
 	<description>Student Management System</description>
 	<url/>
