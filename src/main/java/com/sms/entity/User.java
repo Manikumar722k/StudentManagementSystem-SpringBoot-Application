@@ -29,6 +29,9 @@ public class User {
 		this.role = role;
 		this.fullname = fullname;
 	}
+	
+	
+	//setters and getter are added newly
 	public Long getId() {
 		return id;
 	}
