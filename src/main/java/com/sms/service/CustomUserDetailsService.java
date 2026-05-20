@@ -25,6 +25,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 		}
 		
 		return new CustomUserDetail(user);
+		//Customer name: Age: sex://
 
 	}
 
