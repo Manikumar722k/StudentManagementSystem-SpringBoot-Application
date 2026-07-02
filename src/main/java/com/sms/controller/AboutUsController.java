@@ -17,3 +17,4 @@ public class AboutUsController {
 		return "about_us";
 	}
 }
+//this is a controller class
