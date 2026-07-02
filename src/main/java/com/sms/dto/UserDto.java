@@ -46,5 +46,5 @@ public class UserDto {
 	public void setFullname(String fullname) {
 		this.fullname = fullname;
 	}
-	
+	//this is a dto class
 }
