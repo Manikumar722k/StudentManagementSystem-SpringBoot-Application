@@ -34,5 +34,6 @@ public class Classes {
 	private String classSection;
 	@NotNull(message = "Mention Date")
 	private LocalDate date;
-	
+	//private LocalTime time
 }
+
